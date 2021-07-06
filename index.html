@@ -90,7 +90,7 @@ function handleSensor(e){
   document.getElementById('zer').style.top = dist[1] +'px';
 
 
-      alert(dist);
+     // alert(dist);
 }  
 const sensor = new AbsoluteOrientationSensor({frequency: 60});
 sensor.addEventListener("reading", (e) => handleSensor(e));
