@@ -83,7 +83,7 @@ function handleSensor(e){
       }
      
       let dist = angles.map((angle, i) => calcDist(angle, initPos[i]));
-      console.log(dist);
+      alert(dist);
 }  
 const sensor = new AbsoluteOrientationSensor({frequency: 60});
 sensor.addEventListener("reading", (e) => handleSensor(e));
