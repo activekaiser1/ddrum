@@ -167,8 +167,9 @@ var i;
 
 }
 var counter = 0;
-var ini = screen.width/250
+
 setInterval(function(){ 
+  var ini = screen.width/250
 counter++;
 
 xzib[1].style.width = 250*ini +'px';
@@ -203,7 +204,7 @@ xzib[1].style.width = 250*ini +'px';
    
    if(counter==50*ini){counter=0;};
   
-  }, 300);
+  }, 10000);
   
   alert(10);
 </script>
