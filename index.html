@@ -81,6 +81,8 @@ let initPos;
 let calibrate = true;
 document.body.style.zoom = "100%"; 
 document.body.scrollLeft = 0;
+  html.scrollLeft = 0;
+  html.style.overflow = "hidden";
 document.body.style.overflow = "hidden";
 document.body.addEventListener("click", () => {calibrate = true})
 
@@ -95,16 +97,19 @@ function handleSensor(e){
      
       let dist = angles.map((angle, i) => calcDist(angle, initPos[i]));
       document.body.style.zoom = "100%"; 
+    html.scrollLeft = 0;
+  html.style.overflow = "hidden";
 xzib[7].style.left = window.innerWidth/2 + dist[0] + 'px';
 xzib[7].style.top = window.innerHeight/2 + dist[1] +'px';
   
-  if(xzib[7].style.left>300 + "px"){xzib[7].style.left=0 + "px"};
+  if(xzib[7].style.left>300 + "px"){xzib[7].style.left=20 + "px"};
        document.body.style.zoom = "100%"; 
        
        document.body.style.overflow = "hidden";
 // alert(dist[0] + ',' + dist[1] + ',' + dist[2]);
 document.body.scrollLeft = 0;
-
+  html.scrollLeft = 0;
+  html.style.overflow = "hidden";
      // alert(dist);
 }  
 const sensor = new AbsoluteOrientationSensor({frequency: 60});
