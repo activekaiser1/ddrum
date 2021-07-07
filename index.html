@@ -91,8 +91,8 @@ function handleSensor(e){
      
       let dist = angles.map((angle, i) => calcDist(angle, initPos[i]));
   
-xzib[7].style.left = dist[0] + 'px';
-xzib[7].style.top = dist[1] +'px';
+xzib[7].style.left = window.innerWidth/2 + dist[0] + 'px';
+xzib[7].style.top = window.innerHeight/2 + dist[1] +'px';
 // alert(dist[0] + ',' + dist[1] + ',' + dist[2]);
 
 if(xzib[7].style.left>window.innerWidth-100){xzib[7].style.left=window.innerWidth-100 + "px"};
