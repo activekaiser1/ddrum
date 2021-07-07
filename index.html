@@ -62,7 +62,7 @@
 
 <script>
   
-document.body.style.zoom = "75%"; 
+
   
 var yuu = 0;
 var xzib = document.querySelectorAll("svg");
@@ -79,7 +79,7 @@ var colu = [
 
 let initPos;
 let calibrate = true;
-
+document.body.style.zoom = "150%"; 
 document.body.addEventListener("click", () => {calibrate = true})
 
 function handleSensor(e){
@@ -92,10 +92,10 @@ function handleSensor(e){
       }
      
       let dist = angles.map((angle, i) => calcDist(angle, initPos[i]));
-      document.body.style.zoom = "75%";
+      document.body.style.zoom = "150%"; 
 xzib[7].style.left = window.innerWidth/2 + dist[0] + 'px';
 xzib[7].style.top = window.innerHeight/2 + (dist[1]*10) +'px';
-        document.body.zoom = "75%";
+       document.body.style.zoom = "150%"; 
 // alert(dist[0] + ',' + dist[1] + ',' + dist[2]);
 
 
@@ -218,7 +218,5 @@ xzib[1].style.width = 250*ini +'px';
 </script>
   
 </body>
-  <style>
-    html, body {margin: 0; height: 100%; overflow: hidden}
-  </style>
+
 </html>
