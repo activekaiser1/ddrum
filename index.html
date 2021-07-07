@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body style="max-width: 15px;">
 
 <svg class="boxx" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" style="position:absolute;">
   <defs>
@@ -95,15 +95,13 @@ function handleSensor(e){
      
       let dist = angles.map((angle, i) => calcDist(angle, initPos[i]));
       document.body.style.zoom = "100%"; 
-      document.body.scrollLeft = 0;
-      document.body.style.overflow = "hidden";
 xzib[7].style.left = window.innerWidth/2 + dist[0] + 'px';
 xzib[7].style.top = window.innerHeight/2 + dist[1] +'px';
        document.body.style.zoom = "100%"; 
-       document.body.scrollLeft = 0;
+       
        document.body.style.overflow = "hidden";
 // alert(dist[0] + ',' + dist[1] + ',' + dist[2]);
-
+document.body.scrollLeft = 0;
 
      // alert(dist);
 }  
@@ -224,7 +222,7 @@ xzib[1].style.width = 250*ini +'px';
 </script>
   
 </body>
-<style type="text/css">
+<style>
     body {
         overflow: hidden;
     }
