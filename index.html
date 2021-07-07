@@ -2,7 +2,6 @@
 <html>
 <body>
 
- <p class="scrollable-place">
 <svg class="boxx" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" style="position:absolute;">
   <defs>
     <!-- define a prectattern using a yellow tile image -->
@@ -178,7 +177,7 @@ setInterval(function(){
 
 counter++;
 
-xzib[1].style.width = 250*ini +500+'px';
+xzib[1].style.width = 250*ini +300+'px';
      xzib[1].style.height = 250*ini + 'px';
   xzib[1].style.top = window.innerHeight/2 - 50*ini*2.5 + 0 +'px';
    xzib[1].style.left = 0 +'px';
@@ -213,37 +212,8 @@ xzib[1].style.width = 250*ini +500+'px';
   }, 1000);
   
   
-    function disableScroll() {
-            // Get the current page scroll position
-            scrollTop = 
-              window.pageYOffset || document.documentElement.scrollTop;
-            scrollLeft = 
-              window.pageXOffset || document.documentElement.scrollLeft,
-  
-                // if any scroll is attempted,
-                // set this to the previous value
-                window.onscroll = function() {
-                    window.scrollTo(scrollLeft, scrollTop);
-                };
-        }
-  
-        function enableScroll() {
-            window.onscroll = function() {};
-        }
- 
+
 </script>
-  <style>
-      .scrollable-place {
-            height: 1000px;
-        }
-          
-        .stop-scrolling {
-            height: 100%;
-            overflow: hidden;
-        }
-    
-   
-  </style>
-  </p>
+
 </body>
 </html>
