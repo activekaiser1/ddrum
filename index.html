@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html><div class="hide-scroll">
+    <div class="viewport">
 <body style="max-width: 15px;">
 
 <svg class="boxx" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" style="position:absolute;">
@@ -225,13 +226,28 @@ xzib[1].style.width = 250*ini +'px';
 </script>
   
 </body>
+        </div>
+</div>
 <style>
-    body {
-        overflow: hidden;
-    }
-  
-  ::-webkit-scrollbar {
-    display: none;
+    .hide-scroll {
+    overflow: hidden;
+}
+
+.viewport {
+    overflow: auto;
+
+    /* Make sure the inner div is not larger than the container
+     * so that we have room to scroll.
+     */
+    max-height: 100%;
+
+    /* Pick an arbitrary margin/padding that should be bigger
+     * than the max scrollbar width across the devices that 
+     * you are supporting.
+     * padding = -margin
+     */
+    margin-right: -100px;
+    padding-right: 100px;
 }
 </style>
 </html>
