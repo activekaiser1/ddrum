@@ -82,7 +82,6 @@ let calibrate = true;
 document.body.style.zoom = "100%"; 
 document.body.scrollLeft = 0;
   html.scrollLeft = 0;
-  html.style.overflow = "hidden";
 document.body.style.overflow = "hidden";
 document.body.addEventListener("click", () => {calibrate = true})
 
@@ -109,7 +108,6 @@ xzib[7].style.top = window.innerHeight/2 + dist[1] +'px';
 // alert(dist[0] + ',' + dist[1] + ',' + dist[2]);
 document.body.scrollLeft = 0;
   html.scrollLeft = 0;
-  html.style.overflow = "hidden";
      // alert(dist);
 }  
 const sensor = new AbsoluteOrientationSensor({frequency: 60});
