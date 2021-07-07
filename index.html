@@ -62,6 +62,7 @@
 
 <script>
   document.body.style.zoom = "75%";
+
 var yuu = 0;
 var xzib = document.querySelectorAll("svg");
 var arra = [];
@@ -94,7 +95,7 @@ function handleSensor(e){
 xzib[7].style.left = window.innerWidth/2 + dist[0] + 'px';
 xzib[7].style.top = window.innerHeight/2 + dist[1] +'px';
 // alert(dist[0] + ',' + dist[1] + ',' + dist[2]);
-document.body.classList.add("stop-scrolling");
+  document.body.scrollLeft = 0;
 
 
      // alert(dist);
