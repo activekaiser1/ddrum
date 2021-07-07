@@ -72,7 +72,7 @@ var colu = [
 
 ];
 
-
+document.body.classList.add("stop-scrolling");
 
 
 let initPos;
@@ -233,12 +233,16 @@ xzib[1].style.width = 250*ini +'px';
  
 </script>
   <style>
-    body {
-      min-width: 320px;
-    max-width: 320px;
-       min-height: 520px;
-    max-height: 520px;
-  }
+      .scrollable-place {
+            height: 1000px;
+        }
+          
+        .stop-scrolling {
+            height: 100%;
+            overflow: hidden;
+        }
+    
+   
   </style>
 </body>
 </html>
