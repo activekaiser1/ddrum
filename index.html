@@ -61,6 +61,9 @@
 
 
 <script>
+  
+document.body.style.zoom = "75%"; 
+  
 var yuu = 0;
 var xzib = document.querySelectorAll("svg");
 var arra = [];
@@ -89,10 +92,10 @@ function handleSensor(e){
       }
      
       let dist = angles.map((angle, i) => calcDist(angle, initPos[i]));
-      document.body.style.zoom = "100%";
+      document.body.style.zoom = "75%";
 xzib[7].style.left = window.innerWidth/2 + dist[0] + 'px';
 xzib[7].style.top = window.innerHeight/2 + (dist[1]*10) +'px';
-        document.body.zoom = "100%";
+        document.body.zoom = "75%";
 // alert(dist[0] + ',' + dist[1] + ',' + dist[2]);
 
 
