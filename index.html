@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html><div class="hide-scroll">
-    <div class="viewport">
+<html>
 <body style="max-width: 15px;">
 
 <svg class="boxx" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" style="position:absolute;">
@@ -95,7 +94,7 @@ function handleSensor(e){
       }
      
       let dist = angles.map((angle, i) => calcDist(angle, initPos[i]));
-      document.body.style.zoom = "100%"; 
+  
 xzib[7].style.left = window.innerWidth/2 + dist[0] + 'px';
 xzib[7].style.top = window.innerHeight/2 + dist[1] +'px';
   
@@ -103,12 +102,9 @@ xzib[7].style.top = window.innerHeight/2 + dist[1] +'px';
    if(xzib[7].style.top>window.innerHeight-100 + "px"){xzib[7].style.top=20 + "px"};
      if(xzib[7].style.left<10 + "px"){xzib[7].style.left=20 + "px"};
    if(xzib[7].style.top<10 + "px"){xzib[7].style.top=20 + "px"};
-       document.body.style.zoom = "100%"; 
-       
-       document.body.style.overflow = "hidden";
+ 
 // alert(dist[0] + ',' + dist[1] + ',' + dist[2]);
-document.body.scrollLeft = 0 + "px";
-  document.body.scrollTop = 0 + "px";
+
   // alert(dist);
 }  
 const sensor = new AbsoluteOrientationSensor({frequency: 60});
@@ -228,28 +224,6 @@ xzib[1].style.width = 250*ini +'px';
 </script>
   
 </body>
-        </div>
-</div>
-<style>
-    .hide-scroll {
-    overflow: hidden;
-}
+ 
 
-.viewport {
-    overflow: auto;
-
-    /* Make sure the inner div is not larger than the container
-     * so that we have room to scroll.
-     */
-    max-height: 100%;
-
-    /* Pick an arbitrary margin/padding that should be bigger
-     * than the max scrollbar width across the devices that 
-     * you are supporting.
-     * padding = -margin
-     */
-    margin-right: -100px;
-    padding-right: 100px;
-}
-</style>
 </html>
