@@ -82,6 +82,8 @@ let calibrate = true;
 document.body.addEventListener("click", () => {calibrate = true})
 
 function handleSensor(e){
+  alert(dist[0]);
+  document.write(dist[0]);
       let quaternion = e.target.quaternion;
       let angles = toEuler(quaternion);
 
